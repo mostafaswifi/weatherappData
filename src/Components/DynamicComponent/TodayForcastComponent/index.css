@@ -1,0 +1,91 @@
+input:focus-visible{
+    outline: 0!important;
+}
+iframe{
+    height: 300px;
+    width: 200px
+}
+select, select:focus-visible{
+    border: 0!important;
+    outline: none;
+}
+select:focus {
+    box-shadow: none;
+    outline: none;
+  }
+.icon-sizer{
+    width: 25px;
+    height: 25px;
+    
+}
+
+.logo{
+    width: 80px;
+}
+
+.text-sky{
+    color: #0d67b5;
+}
+
+.arch{
+    width: 200px;
+    height: 200px;
+}
+
+.sunMoon{
+    width: 150px;
+    height: 150px;
+   border: 2px solid;
+    border-color: #b9b9b9;
+    position: relative;
+}
+
+.sunMoon::after{
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f185";
+    color: #0d67b5;
+    font-size: xx-large;
+    background-color: white;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.left  {
+    left: -20%;
+    top: 37%;
+}
+.right  {
+    right: -19%;
+    top: 37%;
+
+}
+.dimmer{
+    top: 65%;
+}
+
+.wind-dir svg{
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+.accordion{
+
+    --bs-accordion-border-color: none
+}
+.accordion-button:focus{
+    border: 0;
+    box-shadow: none!important;
+}
+
+.accordion-button:not(.collapsed){
+    background-color: transparent;
+}

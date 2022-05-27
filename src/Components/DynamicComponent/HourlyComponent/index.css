@@ -1,0 +1,37 @@
+
+select, select:focus-visible{
+    border: 0!important;
+    outline: none;
+}
+select:focus {
+    box-shadow: none;
+    outline: none;
+  }
+
+
+
+.text-sky{
+    color: #0d67b5;
+}
+
+
+
+
+
+
+
+
+
+
+.accordion{
+
+    --bs-accordion-border-color: none!important;
+}
+.accordion-button:focus{
+    border: 0!important;
+    box-shadow: none!important;
+}
+
+.accordion-button:not(.collapsed){
+    background-color: transparent!important;
+}
