@@ -1,10 +1,11 @@
 import React from "react";
 import './index.css';
+import DaysComponent from '../../Components/DynamicComponent/DayesComponent'
 
 let DaysLayout = () => {
   return (
-    <div className="container">
-      <h1>Days Layout</h1>
+    <div className="">
+      <DaysComponent />
     </div>
   );
 }

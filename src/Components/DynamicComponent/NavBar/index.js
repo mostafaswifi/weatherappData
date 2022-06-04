@@ -1,10 +1,20 @@
-import React from "react";
+import React,{useContext} from "react";
+import {dataGrapperContext} from "../../../App";
 import './index.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as solidIcons from '@fortawesome/free-solid-svg-icons'
 import {NavLink} from 'react-router-dom';
+
+
+
 let NavBar = () => {
+
+  const icon = useContext(dataGrapperContext);
+  const {iconGenerator} = icon;
+  const dataGr = useContext(dataGrapperContext);
+  const { dataFinalHolder } = dataGr;
     return (
+
         <nav
         className="navbar navbar-expand-lg pt-0 my-2 my-md-5"
         aria-label="Eighth navbar example"
@@ -42,14 +52,15 @@ let NavBar = () => {
             </ul>
           </div>
   
-          <div className="d-flex fs-1 shadow p-3">
+          <div className="d-flex fs-1 shadow-sm p-1">
             <div className="d-flex align-items-center text-sky mx-1 mx-md-4">
-              <FontAwesomeIcon icon={solidIcons.faSun}  className=' mx-1 mx-md-2'/>
-              <span className="fs-4 text-muted">81°</span>
+              {/* <FontAwesomeIcon icon={solidIcons.faSun}  className=' mx-1 mx-md-2'/> */}
+              <div className=" mx-1 mx-md-2">{iconGenerator()}</div> 
+              <span className="fs-4 text-muted">{dataFinalHolder.location ? dataFinalHolder.current.temp_c : "degree"}°</span>
             </div>
             <div className="d-flex align-items-center text-sky mx-1 mx-md-4">
               <FontAwesomeIcon icon={solidIcons.faLocationDot}  className='mx-1 mx-md-2'/>
-              <span className="text-uppercase fs-4 text-muted">egypt</span>
+              <span className="text-uppercase fs-4 text-muted">{dataFinalHolder.location ? dataFinalHolder.location.country : "Country"}</span>
             </div>
           </div>
         </div>

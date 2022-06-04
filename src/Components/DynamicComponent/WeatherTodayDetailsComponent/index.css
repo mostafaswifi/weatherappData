@@ -89,3 +89,10 @@ select:focus {
 .accordion-button:not(.collapsed){
     background-color: transparent;
 }
+
+
+.pointer{
+    cursor: pointer;
+}
+
+

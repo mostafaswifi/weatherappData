@@ -1,11 +1,20 @@
-import React from "react";
+import React,{useContext} from "react";
+import {dataGrapperContext} from "../../../App";
 import './index.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as solidIcons from '@fortawesome/free-solid-svg-icons'
 import logo from '../../../assets/imgs/weaZer-logos.jpeg'
 import { NavLink } from "react-router-dom";
+
+
+
 let SearchBar = () => {
+ const dataGr = useContext(dataGrapperContext);
+  const { dataGrapper } = dataGr;
+
+
     return(
+      <React.StrictMode>
         <section
         className="navbar navbar-expand-lg sticky-top pb-0 bg-white"
         aria-label="Top nav bar"
@@ -28,6 +37,7 @@ let SearchBar = () => {
           <div className="d-flex flex-md-nowrap flex-wrap-reverse flex-grow-1 my-3">
             <form role="search" className="d-flex flex-grow-1 form-control my-3">
               <input
+                          onChange={(e) => dataGrapper( e.target.value)}
                 className="border-0 flex-grow-1 h-100"
                 type="search"
                 placeholder="Search By City Name"
@@ -60,6 +70,7 @@ let SearchBar = () => {
           </div>
         </div>
       </section>
+      </React.StrictMode>
     )
 };
 

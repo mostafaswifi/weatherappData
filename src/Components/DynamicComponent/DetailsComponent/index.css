@@ -2,3 +2,7 @@
 .text-sky{
     color: #0d67b5;
 }
+
+.pointer{
+    cursor: pointer;
+}
